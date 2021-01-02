@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to Caring</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bdced515aa.js" crossorigin="anonymous"></script>
+    <script>
+      function fontChange(type) {
+        txt = document.querySelectorAll('.content-text, .main-text');
+
+        for (var i = 0; i < txt.length; i++) {
+          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
+          currentSize = parseFloat(style);
+          if (type === "increase" ) {
+            if (currentSize <= 23) {
+              txt[i].style.fontSize = (currentSize + 2) + 'px';
+            }
+          }
+          else {
+            if (currentSize >= 17) {
+              txt[i].style.fontSize = (currentSize - 2) + 'px';
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header tabindex="0">
+      <nav>
+        <div class="menu-logo">
+          <a href="home.html" class="logo" accesskey="a"><p>Caring <i class="fas fa-comment-dots" id="logo-img"></i></p></a>
+        </div>
+        <div class="menu-items">
+          <a href="about.html" class="item" accesskey="b"><p>About</p></a>
+          <a href="https://web.telegram.org/#/login" target="_blank" class="item" accesskey="c"><p>Telegram</p></a>
+          <div class="increaseOrDecrease">
+            <a href="javascript:fontChange('increase')" class="incDec"><p>A+</p></a> <a href="javascript:fontChange('decrease')" class="incDec"><p>A-</p></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main tabindex="0">
+      <div class="container">
+        <div class="content">
+          <div class="content-text">
+            <h2>Meet Caring</h2>
+            <h3>Millions of youth across the world are experiencing HIV. Poor access to education, stigma toward people with HIV, and failure to use condoms are keeping youth in the dark. </h3>
+            <a href="https://web.telegram.org/#/login" target="_blank" class="button" accesskey="d">Start using Caring on Telegram by typing @caringhiv_bot</a>
+          </div>
+          <div class="content-image">
+            <img src="aboutpg.gif" alt="A student with a bright blue and turquoise jumpsuit is looking at a white tablet and gradually moving it up and down.">
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section tabindex="0">
+      <div class="main-content">
+        <div class="content">
+          <div class="main-text">
+            <h2>About HIV</h2>
+            <h3>There were approximately 36.7 million people worldwide living with HIV/AIDS at the end of 2016. Of these, 2.1 million were children less than 15 years old. Caring is here to change that. The lack of education about HIV around the world is alarming. </h3>
+            <a href="https://www.avert.org/" target="_blank" class="main-button" accesskey="e">Learn more about the HIV crisis from AVERT</a>
+          </div>
+          <div class="content-image">
+            <img src="aboutsecond.png" alt="Three people are depicted on a grid on a phone - they are having a video chat and discussing sexual health." id="aboutimage">
+          </div>
+        </div>
+        <div class="content">
+          <div class="main-text">
+            <h2>A new way to teach</h2>
+            <h3>We also recognize that many educators want to teach their students about HIV and safer sex, but they may not have the materials to do so. With Caring, they do. ​​We've created over 20 materials that you can use in your classroom for free.</h3>
+            <a href="https://drive.google.com/open?id=1J_pBBTy6bk0ICoyMKEYPrJJYCKhklSBc" target="_blank" class="main-button" accesskey="f">Check out additional resources for educators here</a>
+          </div>
+          <div class="content-image">
+            <img src="aboutthird.gif" alt="A student in a white sweatshirt, brown shorts, and headphones around their neck is waving at their brown tablet.">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer tabindex="0">
+      <nav class="footer-nav">
+        <div class="footer-menu-logo">
+          <p class="logo">Caring <i class="fas fa-comment-dots" id="logo-img"></i></p>
+        </div>
+        <div class="footer-menu-items">
+          <a href="https://drive.google.com/open?id=1J_pBBTy6bk0ICoyMKEYPrJJYCKhklSBc" target="_blank" class="item" accesskey="g"><p>More resources</p></a>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>
