@@ -8,19 +8,19 @@
     <script src="https://kit.fontawesome.com/bdced515aa.js" crossorigin="anonymous"></script>
     <script>
       function fontChange(type) {
-        txt = document.querySelectorAll('.content-text, .main-text');
+        let text = document.querySelectorAll('.content-text, .main-text');
 
-        for (var i = 0; i < txt.length; i++) {
-          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
-          currentSize = parseFloat(style);
+        for (let i = 0; i < text.length; i++) {
+          let selectedStyle = window.getComputedStyle(text[i], null).getPropertyValue('font-size');
+          let size = parseFloat(selectedStyle);
           if (type === "increase" ) {
-            if (currentSize <= 23) {
-              txt[i].style.fontSize = (currentSize + 2) + 'px';
+            if (size <= 23) {
+              text[i].style.fontSize = (size + 2) + 'px';
             }
           }
           else {
-            if (currentSize >= 17) {
-              txt[i].style.fontSize = (currentSize - 2) + 'px';
+            if (size >= 17) {
+              text[i].style.fontSize = (size - 2) + 'px';
             }
           }
         }
